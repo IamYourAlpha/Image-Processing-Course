@@ -1,0 +1,13 @@
+import cv2
+    2 import numpy as np
+    3 from matplotlib import pyplot as plt
+    4 
+    5 img = cv2.imread('messi5.jpg',0)
+    6 edges = cv2.Canny(img,100,200)
+    7 
+    8 plt.subplot(121),plt.imshow(img,cmap = 'gray')
+    9 plt.title('Original Image'), plt.xticks([]), plt.yticks([])
+   10 plt.subplot(122),plt.imshow(edges,cmap = 'gray')
+   11 plt.title('Edge Image'), plt.xticks([]), plt.yticks([])
+   12 
+   13 plt.show()
